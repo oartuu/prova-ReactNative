@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, Button, ScrollView } from 'react-native';
+import { View, Text, TextInput, Button, ScrollView, TouchableOpacity } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const Cadastro = ({ closeModal }) => {
@@ -36,36 +36,72 @@ const Cadastro = ({ closeModal }) => {
 
   return (
     <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <Text>Cadastro</Text>
+      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor:'#07273C' }}>
+        <Text style={{
+          color: '#fff',
+          fontSize: 30,
+          marginBottom: 50,
+          fontWeight: '600'
+        }}>Cadastro</Text>
         <TextInput
           placeholder="Nome"
           value={nome}
+          placeholderTextColor="#d3d3d3"
           onChangeText={setNome}
-          style={{ borderWidth: 1, padding: 10, margin: 10, width: 200 }}
+          style={{ borderWidth: 1, padding: 10, margin: 10, width: 200, borderColor:'#60B1E8', borderRadius: 5, }}
         />
         <TextInput
           placeholder="Email"
           value={email}
+          placeholderTextColor="#d3d3d3"
           onChangeText={setEmail}
-          style={{ borderWidth: 1, padding: 10, margin: 10, width: 200 }}
+          style={{ borderWidth: 1, padding: 10, margin: 10, width: 200, borderColor:'#60B1E8', borderRadius: 5, }}
         />
         <TextInput
           placeholder="Senha"
           value={password}
+          placeholderTextColor="#d3d3d3"
           onChangeText={setPassword}
           secureTextEntry
-          style={{ borderWidth: 1, padding: 10, margin: 10, width: 200 }}
+          style={{ borderWidth: 1, padding: 10, margin: 10, width: 200, borderColor:'#60B1E8', borderRadius: 5, }}
         />
         <TextInput
           placeholder="Confirmar Senha"
           value={confirmPassword}
+          placeholderTextColor="#d3d3d3"
           onChangeText={setConfirmPassword}
           secureTextEntry
-          style={{ borderWidth: 1, padding: 10, margin: 10, width: 200 }}
+          style={{ borderWidth: 1, padding: 10, margin: 10, width: 200, borderColor:'#60B1E8' , borderRadius: 5,}}
         />
-        <Button title="Cadastrar" onPress={handleCadastro} />
-        <Button title="Fechar" onPress={closeModal} />
+
+        <TouchableOpacity style={{
+          marginBottom: 30,
+          backgroundColor: '#0A6EC6',
+          padding: 10,
+          borderRadius: 8,
+        }}
+        onPress={handleCadastro}>
+          <Text style={{
+            color: '#fff',
+            fontSize: 20,
+          }}>Cadastrar</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity style={{
+          marginBottom: 30,
+          backgroundColor: '#0A6EC6',
+          padding: 10,
+          borderRadius: 8,
+        }}
+        onPress={closeModal}>
+          <Text style={{
+            color: '#fff',
+            fontSize: 20,
+          }}>Fechar</Text>
+        </TouchableOpacity>
+
+      {/* <Button title="Cadastrar" onPress={handleCadastro} />
+      <Button title="Fechar" onPress={closeModal} /> */}
       </View>
     </ScrollView>
   );

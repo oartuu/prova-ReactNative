@@ -8,9 +8,9 @@
     "userInterfaceStyle": "light",
     "scheme": "prova",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/loading.jpeg",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#242424"
     },
     "assetBundlePatterns": [
       "**/*"
