@@ -47,6 +47,7 @@ const Cadastro = ({ closeModal }) => {
           placeholder="Nome"
           value={nome}
           placeholderTextColor="#d3d3d3"
+          color = "#d3d3d3"
           onChangeText={setNome}
           style={{ borderWidth: 1, padding: 10, margin: 10, width: 200, borderColor:'#60B1E8', borderRadius: 5, }}
         />
@@ -54,6 +55,7 @@ const Cadastro = ({ closeModal }) => {
           placeholder="Email"
           value={email}
           placeholderTextColor="#d3d3d3"
+          color = "#d3d3d3"
           onChangeText={setEmail}
           style={{ borderWidth: 1, padding: 10, margin: 10, width: 200, borderColor:'#60B1E8', borderRadius: 5, }}
         />
@@ -61,6 +63,7 @@ const Cadastro = ({ closeModal }) => {
           placeholder="Senha"
           value={password}
           placeholderTextColor="#d3d3d3"
+          color = "#d3d3d3"
           onChangeText={setPassword}
           secureTextEntry
           style={{ borderWidth: 1, padding: 10, margin: 10, width: 200, borderColor:'#60B1E8', borderRadius: 5, }}
@@ -69,6 +72,7 @@ const Cadastro = ({ closeModal }) => {
           placeholder="Confirmar Senha"
           value={confirmPassword}
           placeholderTextColor="#d3d3d3"
+          color = "#d3d3d3"
           onChangeText={setConfirmPassword}
           secureTextEntry
           style={{ borderWidth: 1, padding: 10, margin: 10, width: 200, borderColor:'#60B1E8' , borderRadius: 5,}}

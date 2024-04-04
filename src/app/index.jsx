@@ -5,7 +5,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import Cadastro from './Cadastro';
 
 
-const index = () => {
+const Login = () => {
   const [modalVisible, setModalVisible] = useState(false);
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -99,7 +99,7 @@ const index = () => {
 
   return (
     
-      <ImageBackground source={require(bacgroundImage)} resizeMode="cover" style={styles.container}>
+      <ImageBackground source={require(bacgroundImage)} resizeMode="cover" style={styles.container} >
       <Text style={styles.texto} >Realize Login</Text>
       {/* Campos de login */}
       <TextInput
@@ -187,4 +187,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default index;
+export default Login;

@@ -29,7 +29,7 @@ const sair = async ()=>{
       await AsyncStorage.removeItem('isLoggedIn');
 
       // Redirecionar para a tela de login
-      router.navigate('/Index')
+      router.navigate('/')
     } catch (error) {
       console.error('Erro ao fazer logout:', error);
     }
