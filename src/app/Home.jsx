@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, ImageBackground, TouchableOpacity } from 'react-native'
+import { StatusBar, Text, StyleSheet, ImageBackground, TouchableOpacity } from 'react-native'
 import React, { useState, useEffect } from 'react'
 import AsyncStorage from '@react-native-async-storage/async-storage'
 import {router} from 'expo-router'
@@ -39,7 +39,8 @@ const sair = async ()=>{
 
 
   return (
-    <ImageBackground source={require('../../assets/home.jpeg')} style= {styles.container} >
+    <ImageBackground style= {styles.container} >
+      <StatusBar/>
       <Text style={styles.texto}> Bem vindo, {username} </Text>
 
 
